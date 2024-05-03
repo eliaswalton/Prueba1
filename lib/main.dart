@@ -24,4 +24,15 @@ class ColorChangerWidget extends StatefulWidget{
 }
 
 
+class _ColorChangerWidgetState extends State<ColorChangerWidget>{
+  Color _currentColor = Colors.blue;
+  
+  void _changeColor(){
+    setState(() {
+      _currentColor = (_currentColor == Colors.blue) ? Colors.red : Colors.blue;
+    });
+  }
+
+
+
 
