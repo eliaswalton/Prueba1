@@ -33,6 +33,26 @@ class _ColorChangerWidgetState extends State<ColorChangerWidget>{
     });
   }
 
-
+  @override 
+  
+  Widget build(BuildContext context){
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Color Changing Widget")
+      ),
+      body: Center(
+        child: GestureDetector(
+          onTap: _changeColor,
+          child: Container(
+            width: 300,
+            height: 100,
+            color: _currentColor,
+            child: Center(child: Text("Presiona para cambiar el color",
+            style: TextStyle(color: Colors.white,
+            fontSize: 18,),),)
+          ),) ,)
+    );
+  }
+}
 
 
